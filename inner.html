@@ -6,19 +6,21 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="main-header container">
       <div class="logo">
-        <img src="http://placehold.it/150x100">
+        <a href="index.html">
+          <img src="img/logo.png" width="138" height="70" title="logo" alt="logo">
+        </a>
       </div>
-      <ul class="main-menu">
+      <ul class="main-menu clearfix">
+        <li class="main-menu-item">
+            <a href="#">
+              Информация
+            </a>
+          </li>
         <li class="main-menu-item">
           <a href="#">
-            Информация
-          </a>
-        </li>
-        <li class="main-menu-item">
-          <a href="#">
-            Фото и веидео
+            Фото и видео
           </a>
         </li>
         <li class="main-menu-item">
@@ -33,186 +35,210 @@
         </li>
       </ul>
     </header>
-    <main>
-      <form class="filer-form">
-        <fildset class="infrastructure-filter">
-          <legend>
-            Инфраструктура:
-          </legend>
-          <label>
-            <input type="checkbox" checked>
-            бассейн
-          </label>
-            <input type="checkbox">
-          <label>
-            парковка
-          </label>
-          <label>
-            <input type="checkbox">
-            wi-fi
-          </label>
-      </fieldset>
-      <fildset class="type-of-accommodation-filter">
-        <legend>
-          Тип жилья:
-        </legend>
-        <label>
-          <input type="checkbox" checked>
-          гостиница
-        </label>
-        <label>
-          <input type="checkbox" checked>
-          мотель
-        </label>
-        <label>
-          <input type="checkbox" checked>
-          апартаменты
-        </label>
-      </fildset>
-      <fildset class="cost-day-filter">
-        <legend>
-          Стоимость в сутки (р):
-        </legend>
-        </div>
-          от <span class="range-min" id="range-min">0</span>
-          до <span class="range-max" id="range-max">30000</span>
-        </div>
-        <div class="filter-backing filter-pricecount">
-          <input type="range" class="pricecount" id="pricecount" name="pricecount" min="0" max="30000" step="10">
-          <div class="marker-begin"></div>
-          <div class="marker-end"></div>
-        </fildset>
-        Показать
-      </form>
-      <div class="find-result">
-        Найдено:
-        <span class="find-result-cnt">
-          3
-        </span>
-        <div>
-      <div class="filter-sort-hotel">
-        <div class="catalog-block-title">
-          Сортировка
-        </div>
-        <div class="filter-backing">
-          <form class="filters-form" action="#" method="get">
-            <input type="radio"  id="sort-hotel-1" name="sort-hotel" value="sort-by-price" class="input-sort" checked >
-            <label for="sort-hotel-1" class="label-sort label-sort-by-price"><b>по цене</b></label>
-            <input type="radio"  id="sort-hotel-2" name="sort-hotel" value="sort-by-type" class="input-sort">
-            <label for="sort-hotel-2" class="label-sort label-sort-by-type"><b>по типу</b></label>
-            <input type="radio"  id="sort-hotel-3" name="sort-hotel"  value="sort-by-function" class="input-sort">
-            <label for="sort-hotel-3" class="label-sort label-sort-by-rating"><b>по рейтингу</b></label>
-            <input type="radio"  id="sort-hotel-direction-up" name="sort-hotel-direction" class="sort-hotel-direction" checked>
-            <label for="sort-hotel-direction-up">Вверх</label>
-            <input type="radio"  id="sort-hotel-direction-down" name="sort-hotel-direction" class="sort-hotel-direction">
-            <label for="sort-hotel-direction-down">Вниз</label>
-          </form>
-        </div>
+    <main  class="container">
+      <div class="filters-container">
+        <form class="filer-form clearfix">
+          <fildset class="filter-form-item infrastructure-filter">
+            <legend class="header-filter">
+              Инфраструктура:
+            </legend>
+            <label class="label-in-filter">
+              <input type="checkbox" checked>
+              бассейн
+            </label>
+            <label class="label-in-filter">
+                <input type="checkbox">
+              парковка
+            </label>
+            <label class="label-in-filter">
+              <input type="checkbox">
+              wi-fi
+            </label>
+          </fildset>
+          <fildset class="filter-form-item type-of-accommodation-filter">
+            <legend class="header-filter">
+              Тип жилья:
+            </legend>
+            <label  class="label-in-filter">
+              <input type="checkbox" checked>
+              гостиница
+            </label>
+            <label class="label-in-filter">
+              <input type="checkbox" checked>
+              мотель
+            </label>
+            <label class="label-in-filter">
+              <input type="checkbox" checked>
+              апартаменты
+            </label>
+          </fildset>
+          <fildset class="filter-form-item cost-day-filter">
+            <legend class="header-filter">
+              Стоимость в сутки (р):
+            </legend>
+            <div>
+              от <span class="range-min" id="range-min">0</span>
+              до <span class="range-max" id="range-max">30000</span>
+            </div>
+            <div class="filter-backing filter-pricecount">
+              <input type="range" class="pricecount" id="pricecount" name="pricecount" min="0" max="30000" step="10">
+              <div class="marker-begin"></div>
+              <div class="marker-end"></div>
+            </div>
+            <button>Показать</button>
+          </fildset>
+        </form>
+
       </div>
-      <table class="result-filter-table">
-        <tr>
-          <td>
-            <img src="http://placehold.it/150x100">
-          </td>
-          <td>
-            <h3>
-              Amara resort & SPA
-            </h3>
-            <span class="type-hotel">
-              Гостиница
+      <div class="filters-result-container">
+        <div class="filters-result-container-header clearfix">
+          <div class="find-result">
+            Найдено:
+            <span class="find-result-cnt">
+              3
             </span>
-            <span class="min-price-hotel">
-              от 3500 Р.
-            </span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-          </td>
-          <td>
-            <div class="stars">
-              <div class="star">
-              <div class="star">
-              <div class="star">
-              <div class="star">
+          </div>
+            <div class="filter-sort-hotel ">
+              <div class="catalog-block-title">
+                Сортировка:
+              </div>
+              <div class="filter-backing">
+                <form class="filters-form" action="#" method="get">
+                  <input type="radio"  id="sort-hotel-1" name="sort-hotel" value="sort-by-price" class="input-sort" checked >
+                  <label for="sort-hotel-1" class="label-sort label-sort-by-price">
+                    <b>
+                      по цене
+                    </b>
+                  </label>
+                  <input type="radio"  id="sort-hotel-2" name="sort-hotel" value="sort-by-type" class="input-sort">
+                  <label for="sort-hotel-2" class="label-sort label-sort-by-type">
+                    <b>
+                      по типу
+                    </b>
+                  </label>
+                  <input type="radio"  id="sort-hotel-3" name="sort-hotel"  value="sort-by-function" class="input-sort">
+                  <label for="sort-hotel-3" class="label-sort label-sort-by-rating">
+                    <b>
+                      по рейтингу
+                    </b>
+                  </label>
+                  <div class="sort-hotel-directions">
+                    <input type="radio" class="sort-hotel-direction"  id="sort-hotel-direction-up" name="sort-hotel-direction"  checked>
+                    <label for="sort-hotel-direction-up" class="sort-hotel-direction-label">
+                      Вверх
+                    </label>
+                    <input type="radio" class="sort-hotel-direction" id="sort-hotel-direction-down" name="sort-hotel-direction">
+                    <label for="sort-hotel-direction-down" class="sort-hotel-direction-label">
+                      Вниз
+                    </label>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="rating-hotel">
-              Рейтинг
-              <span class="rating-hotel-value">
-                8,5
+          </div>
+        </div>
+
+        <table class="result-filter-table">
+          <tr>
+            <td class="first-table-col">
+              <img width="135" height="90" title="hotel1" alt="hotel1" src="img/hotel1.jpg">
+            </td>
+            <td class="second-table-col">
+              <span class="hotel-name">
+                Amara resort & SPA
               </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="http://placehold.it/150x100">
-          </td>
-          <td>
-            <h3>
-              Desert quail inn
-            </h3>
-            <span class="type-hotel">
-              Мотель
-            </span>
-            <span class="min-price-hotel">
-              от 2000 Р.
-            </span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-          </td>
-          <td>
-            <div class="stars">
-              <div class="star">
-              <div class="star">
-              <div class="star">
-              <div class="star">
-            </div>
-            <div class="rating-hotel">
-              Рейтинг
-              <span class="rating-hotel-value">
-                8,9
+              <span class="hotel-type">
+                Гостиница
               </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="http://placehold.it/150x100">
-          </td>
-          <td>
-            <h3>
-              Villa at Poco Diadlo
-            </h3>
-            <span class="type-hotel">
-              Апартаменты
-            </span>
-            <span class="min-price-hotel">
-              от 4000 Р.
-            </span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-          </td>
-          <td>
-            <div class="stars">
-              <div class="star">
-              <div class="star">
-              <div class="star">
-              <div class="star">
-            </div>
-            <div class="rating-hotel">
-              Рейтинг
-              <span class="rating-hotel-value">
-                9,2
+              <span class="min-price-hotel">
+                от 3500 Р.
               </span>
-            </div>
-          </td>
-        </tr>
-      </table>
+              <a class="btn-detail-hotel" href="#">Подробнее</a>
+              <a class="btn-book-hotel" href="#">Забронировать</a>
+            </td>
+            <td class="third-table-col">
+              <div class="stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+              </div>
+              <div class="rating-hotel">
+                Рейтинг
+                <span class="rating-hotel-value">
+                  8,5
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="first-table-col">
+              <img width="135" height="90" title="hotel2" alt="hotel2" src="img/hotel2.jpg">
+            </td>
+            <td class="second-table-col">
+              <span class="hotel-name">
+                Desert quail inn
+              </span>
+              <span class="hotel-type">
+                Мотель
+              </span>
+              <span class="min-price-hotel">
+                от 2000 Р.
+              </span>
+              <a class="btn-detail-hotel" href="#">Подробнее</a>
+              <a class="btn-book-hotel" href="#">Забронировать</a>
+            </td>
+            <td class="third-table-col">
+              <div class="stars">
+                <div class="star"></div>
+                <div class="star"></div>
+              </div>
+              <div class="rating-hotel">
+                Рейтинг
+                <span class="rating-hotel-value">
+                  8,9
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td  class="first-table-col">
+              <img width="135" height="90" title="hotel3" alt="hotel3" src="img/hotel3.jpg">
+            </td>
+            <td class="second-table-col">
+              <span class="hotel-name">
+                Villa at Poco Diadlo
+              </span>
+              <span class="hotel-type">
+                Апартаменты
+              </span>
+              <span class="min-price-hotel">
+                от 4000 Р.
+              </span>
+              <a class="btn-detail-hotel" href="#">Подробнее</a>
+              <a class="btn-book-hotel" href="#">Забронировать</a>
+            </td>
+            <td class="third-table-col">
+              <div class="stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+              </div>
+              <div class="rating-hotel">
+                Рейтинг
+                <span class="rating-hotel-value">
+                  9,2
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
     </main>
-    <footer>
-      <h3 class="col1 hashtag">
+    <footer class="main-footer container">
+      <h3 class="hashtag">
         #VISITSEDONA
       </h3>
-      <div class="col1">
+      <div class="social">
         <a class="btn-social btn-social-tw" href="#">
           Twitter
         </a>
@@ -223,11 +249,11 @@
           Youtube
         </a>
       </div>
-      <div class="col1">
-        <p>
-          website
-        </p>
-        <img  class="logo-html-accademy" src="http://placehold.it/150x100">
+      <div class="website">
+        <span>
+          website by
+        </span>
+        <img  class="logo-html-accademy" src="img/logo_htmlacademy.png">
       </div>
     </footer>
   </body>

@@ -6,19 +6,21 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="main-header container">
       <div class="logo">
-        <img src="http://placehold.it/150x100">
+        <a href="index.html">
+          <img src="img/logo.png" width="138" height="70" title="logo" alt="logo">
+        </a>
       </div>
-      <ul class="main-menu">
+      <ul class="main-menu clearfix">
+        <li class="main-menu-item">
+            <a href="#">
+              Информация
+            </a>
+          </li>
         <li class="main-menu-item">
           <a href="#">
-            Информация
-          </a>
-        </li>
-        <li class="main-menu-item">
-          <a href="#">
-            Фото и веидео
+            Фото и видео
           </a>
         </li>
         <li class="main-menu-item">
@@ -33,14 +35,25 @@
         </li>
       </ul>
     </header>
-    <main>
+    <main class="container">
       <div class="intro-photo">
-        <img src="http://placehold.it/150x100">
+        <div class="title-center title-welcome">
+          <img src="img/Welcome.png" width="188" height="45" title="Welcome" alt="Welcome">
+        </div>
+        <div class="title-center title-gorgeous">
+          <img src="img/to_the_gorgrous.png" width="256" height="30" title="to_the_gorgrous" alt="to_the_gorgrous">
+        </div>
+        <div class="title-center title-sedona">
+          <img src="img/Sedona.png" width="458" height="78" title="sedona" alt="sedona">
+        </div>
+        <div class="title-center title-becose">
+          <img src="img/Because_the_Grand _Canyon_sucks.png" width="296" height="80" title="Because_the_Grand _Canyon_sucks" alt="Because_the_Grand _Canyon_sucks">
+        </div>
       </div>
-      <h3>Седона -  небольшой городок в Аризоне, заслужиающий большего</h3>
-      <p>Рассмотрим  5 причин, по которым Седона круче,чем Гранд каньон!</p>
-      <div  class="reason">
-        <div class="col1">
+      <h3 class="title-center city-decription">Седона -  небольшой городок в Аризоне, заслужиающий большего</h3>
+      <p  class="title-center">Рассмотрим  5 причин, по которым Седона круче,чем Гранд каньон!</p>
+      <div class="reasons-list">
+        <div class="reason reason-blue">
           <h3>
             Настоящий городок
           </h3>
@@ -51,12 +64,10 @@
             Седона - не аттракцион для туристов, там течет своя жизнь.
           </p>
         </div>
-        <div class="col2">
-          <img class="photo-reason" src="http://placehold.it/150x100">
+        <div class="reason-image">
+          <img class="photo-reason" src="img/photo-reason1.jpg"width="800" height="256" title="reason1" alt="reason1">
         </div>
-      </div>
-      <div  class="reason">
-        <div class="col1">
+        <div class="reason reason-with-icon reason-first">
           <h3>
             Жилье
           </h3>
@@ -64,7 +75,7 @@
             Рекомендуем пожить в настоящем отеле. Всё как в кино!
           </p>
         </div>
-        <div class="col1">
+        <div class="reason reason-with-icon">
           <h3>
             Еда
           </h3>
@@ -72,7 +83,7 @@
             Всегда заказывайте фирменный бургер. Вы не разочаруетесь!
           </p>
         </div>
-        <div class="col1">
+        <div class="reason reason-with-icon">
           <h3>
             Сувениры
           </h3>
@@ -80,12 +91,10 @@
             Не только китайского но и местного производства!
           </p>
         </div>
-      </div>
-      <div  class="reason">
-        <div class="col2">
-          <img  class="photo-reason" src="http://placehold.it/150x100">
+        <div class="reason-image">
+          <img class="photo-reason" src="img/photo-reason2.jpg"width="800" height="255" title="reason2" alt="reason2">
         </div>
-        <div class="col1">
+        <div class="reason reason-blue">
           <h3>
             Там есть мост дьявола
           </h3>
@@ -96,9 +105,7 @@
             Да, по нему можно пройти, если конечно вы осмелитесь.
           </p>
         </div>
-      </div>
-      <div  class="reason">
-        <div class="col1">
+        <div class="reason reason-first">
           <h3>
             Небольшая площадь
           </h3>
@@ -106,10 +113,10 @@
             №3
           </span>
           <p>
-            Все достопримечательноссти находятся очень близко
+            Все достопримечательности находятся очень близко
           </p>
         </div>
-        <div class="col1">
+        <div class="reason">
           <h3>
             Красивая догога
           </h3>
@@ -117,10 +124,10 @@
             №4
           </span>
           <p>
-            Ехать в Седону из Лас-Вегаса совсем е скучно!
+            Ехать в Седону из Лас-Вегаса совсем не скучно!
           </p>
         </div>
-        <div class="col1">
+        <div class="reason">
           <h3>
             Мало туристов
           </h3>
@@ -133,63 +140,64 @@
         </div>
       </div>
       <div  class="find-hotel">
-        <h2>
+        <h2 class="title-center">
           Заинтересовались?
         </h2>
-        <p>
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+        <p class="title-center">
+          Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
         <button class="btn-find-hotel">Поиск гостиницы в Седоне</button>
         <form class="find-hotel-form">
-          <div>
-            <label from="arrival-date">
+          <div class="form-block-wrap">
+            <label class="label-arrival-date" from="arrival-date">
               Дата заезда
             </label>
-            <input class="text" id="departure-date">
+            <input class="text" id="arrival-date" class="arrival-date" value="24 апреля 2016">
             <div class="calendar">
             </div>
           </div>
-          <div>
-            <label from="arrival-date">
+          <div class="form-block-wrap">
+            <label class="label-departure-date" from="arrival-date">
               Дата выезда
             </label>
-            <input class="text" id="departure-date">
+            <input class="text" id="departure-date" class="departure-date" value="4 июля 2016">
             <div class="calendar">
             </div>
           </div>
-          <div>
-            <label>
+          <div class="form-block-wrap clearfix">
+            <label class="label-number" for="number-adults">
               Взрослые
             </label>
             <div class="minus">
               -
             </div>
-            <input type="number" value="2">
+            <input  class="number" id="number-adults" type="number" value="2">
             <div class="plus">
               +
-              <label>
-                Дети
-              </label>
-              <div class="minus">
-                -
-              </div>
-              <input type="number" value="2">
-              <div class="plus">
-                +
-              </div>
             </div>
-            <input type="submit" value="Найти">
+            <label  class="label-number" for="number-children">
+              Дети
+            </label>
+            <div class="minus">
+              -
+            </div>
+            <input class="number" id="number-children" type="number" value="2">
+            <div class="plus">
+              +
+            </div>
+          </div>
+          <input type="submit" value="Найти">
         </form>
       </div>
       <div class="map">
-          <img  src="http://placehold.it/150x100">
+          <img  src="img/map.jpg" width="1200" height="473" title="map" alt="map">
       </div>
     </main>
-    <footer>
-      <h3 class="col1 hashtag">
+    <footer class="main-footer container">
+      <h3 class="hashtag">
         #VISITSEDONA
       </h3>
-      <div class="col1">
+      <div class="social">
         <a class="btn-social btn-social-tw" href="#">
           Twitter
         </a>
@@ -200,11 +208,11 @@
           Youtube
         </a>
       </div>
-      <div class="col1">
-        <p>
-          website
-        </p>
-        <img  class="logo-html-accademy" src="http://placehold.it/150x100">
+      <div class="website">
+        <span>
+          website by
+        </span>
+        <img  class="logo-html-accademy" src="img/logo_htmlacademy.png">
       </div>
     </footer>
   </body>
